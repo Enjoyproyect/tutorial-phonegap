@@ -42,9 +42,9 @@
 	<preference name="SplashScreenDelay" value="10000" />
 	<plugin name="SplashScreen" value="org.apache.cordova.SplashScreen" />
 	<!--
-        Define a specific version of PhoneGap to build into your app.    -->
+        Define a specific version of PhoneGap to build into your app.    
         <preference name="phonegap-version"       value="3.5.0" />
-
+-->
 
     <!-- Plugins -->
 
