@@ -38,8 +38,8 @@
     <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
     <preference name="android-minSdkVersion"      value="" />              <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
-	<preference name="SplashScreen" value="foo" />
-	<preference name="SplashScreenDelay" value="10000" />
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="2000" />
 	<preference name="SplashMaintainAspectRatio" value="true|false" />
 	<!--
         Define a specific version of PhoneGap to build into your app.    
@@ -90,22 +90,33 @@
     <icon src="icos/173.png" gap:platform="winphone"   gap:role="background" />
 
     <!-- Define app splash screen for each platform. -->
+	<platform name="android">
+	<splash src="res/screen/android/land-hdpi" density="land-hdpi"/>
+    <splash src="res/screen/android/land-ldpi" density="land-ldpi"/>
+    <splash src="res/screen/android/land-mdpi" density="land-mdpi"/>
+    <splash src="res/screen/android/land-xhdpi" density="land-xhdpi"/>
 
-	<gap:splash src="res/screen/android/port-ldpi.png"       gap:platform="android" gap:qualifier="port-ldpi" />
-    <gap:splash src="res/screen/android/port-mdpi.png"       gap:platform="android" gap:qualifier="port-mdpi" />
-    <gap:splash src="res/screen/android/port-hdpi.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="res/screen/android/port-xhdpi.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
-	<gap:splash src="res/screen/android/land-ldpi.png"       gap:platform="android" gap:qualifier="land-ldpi" />
-    <gap:splash src="res/screen/android/land-mdpi.png"       gap:platform="android" gap:qualifier="land-mdpi" />
-    <gap:splash src="res/screen/android/land-hdpi.png"       gap:platform="android" gap:qualifier="land-hdpi" />
-    <gap:splash src="res/screen/android/land-xhdpi.png"      gap:platform="android" gap:qualifier="land-xhdpi" />
+    <splash src="res/screen/android/port-hdpi" density="port-hdpi"/>
+    <splash src="res/screen/android/port-ldpi" density="port-ldpi"/>
+    <splash src="res/screen/android/port-mdpi" density="port-mdpi"/>
+    <splash src="res/screen/android/port-xhdpi" density="port-xhdpi"/>
+</platform>
+
+	<gap:splash src="res/screen/android/port-ldpi"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="res/screen/android/port-mdpi"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="res/screen/android/port-hdpi"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="res/screen/android/port-xhdpi"      gap:platform="android" gap:qualifier="port-xhdpi" />
+	<gap:splash src="res/screen/android/land-ldpi"       gap:platform="android" gap:qualifier="land-ldpi" />
+    <gap:splash src="res/screen/android/land-mdpi"       gap:platform="android" gap:qualifier="land-mdpi" />
+    <gap:splash src="res/screen/android/land-hdpi"       gap:platform="android" gap:qualifier="land-hdpi" />
+    <gap:splash src="res/screen/android/land-xhdpi"      gap:platform="android" gap:qualifier="land-xhdpi" />
 	
-    <splash src="res/screen/320x480.png"         gap:platform="ios"     width="320" height="480" />
-    <splash src="res/screen/640x960.png"      gap:platform="ios"     width="640" height="960" />
-    <splash src="res/screen/640x1136.png" gap:platform="ios"     width="640" height="1136" />
-    <splash src="res/screen/768x1024.png"           gap:platform="ios"     width="768" height="1024" />
-    <splash src="res/screen/1024x768.png"          gap:platform="ios"     width="1024" height="768" />
-    <splash src="res/screen/screen-portrait.jpg"      gap:platform="winphone" />
+    <splash src="res/screen/320x480"         gap:platform="ios"     width="320" height="480" />
+    <splash src="res/screen/640x960"      gap:platform="ios"     width="640" height="960" />
+    <splash src="res/screen/640x1136" gap:platform="ios"     width="640" height="1136" />
+    <splash src="res/screen/768x1024"           gap:platform="ios"     width="768" height="1024" />
+    <splash src="res/screen/1024x768"          gap:platform="ios"     width="1024" height="768" />
+    <splash src="res/screen/screen-portrait"      gap:platform="winphone" />
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
